@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>User List</title>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+    	<script>
+    		var myApp = angular.module('myApp', ['ngRoute']);
+    		myApp.config(function($routeProvider){
+    			$routeProvider
+    				.when('/',{
+    					templateUrl: 'partials/customizeUsers.html'
+    				})
+    				.when('/users',{
+    					templateUrl: 'partials/userList.html'
+    				})
+    				.otherwise({
+    					redirectTo: '/'
+    				});
+    		});
+    	</script>
+	</head>
+	<body>
+	</body>
+</html>
